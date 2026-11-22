@@ -5,7 +5,7 @@ LICENSED under GPLv3 2026
 """
 
 from PySide6.QtWidgets import QMenuBar, QMenu
-from PySide6.QtGui import QAction
+from ui.api import AppInterface as Ai
 
 
 class Menubar(QMenuBar):
@@ -51,8 +51,9 @@ class Menubar(QMenuBar):
         self.InsertMenu.addAction("•\tBullet point")
 
     def _initialize_mode_menu(self):
-        self.ModeMenu.addAction("&Light","Ctrl+Shift+L",None)
-        self.ModeMenu.addAction("&Dark", "Ctrl+Shift+D", None)
+        fn = self.window().get_function(Ai.ChangeAppTheme)
+        self.ModeMenu.addAction("&Light","Ctrl+Shift+L", lambda : fn("light"))
+        self.ModeMenu.addAction("&Dark", "Ctrl+Shift+D", lambda : fn("dark"))
 
     def _initialize_theme_menu(self):
         self.ThemeMenu.addAction("Default")
