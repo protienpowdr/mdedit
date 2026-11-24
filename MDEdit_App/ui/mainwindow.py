@@ -10,6 +10,7 @@ from ui.menubar import Menubar
 from ui.api import AppFunctionResolver,AppWidgetResolver
 from ui.api import AppWidgetType as Aw
 from ui.api import AppInterface as Ai
+from ui.statusbar import StatusBar
 from ui.uibridge import UiBridge
 
 
@@ -32,6 +33,7 @@ class MainWindow(QMainWindow):
 
             # Widgets
             self.menubar =Menubar(self)
+            self.statusbar = StatusBar(self)
 
             # Initialize Widgets
             self._initialize_widget_groups()
@@ -45,6 +47,7 @@ class MainWindow(QMainWindow):
 
         def _initialize_widget_groups(self):
             self.setMenuBar(self.menubar)
+            self.setStatusBar(self.statusbar)
 
         def _initialize_widget_registry(self):
             pass

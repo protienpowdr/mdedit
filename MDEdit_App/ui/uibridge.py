@@ -1,3 +1,9 @@
+"""
+This file is a part of MDEdit
+Written by Baibhav Bhattacharya
+LICENSED under GPLv3 2026
+"""
+
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtCore import *

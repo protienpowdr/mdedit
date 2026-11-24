@@ -1,3 +1,9 @@
+"""
+This file is a part of MDEdit
+Written by Baibhav Bhattacharya
+LICENSED under GPLv3 2026
+"""
+
 from enum import Enum, auto
 from collections.abc import Callable
 from typing import Any

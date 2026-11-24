@@ -30,6 +30,7 @@ class AppAsset():
 
     }
 
+
     @classmethod
     def load_fonts(cls):
         cls._oswald_id = QFontDatabase.addApplicationFont(cls._font_oswald_path)
@@ -69,3 +70,5 @@ class AppAsset():
 
 
 
+class AppStyles:
+    app_styles_directory= "styles/"

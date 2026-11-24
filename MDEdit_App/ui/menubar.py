@@ -26,6 +26,7 @@ class Menubar(QMenuBar):
         self._initialize_menubar()
 
 
+
     def _initialize_menubar(self):
         self.addMenu(self.FileMenu)
         self.addMenu(self.InsertMenu)
@@ -33,11 +34,14 @@ class Menubar(QMenuBar):
         self.addMenu(self.ThemeMenu)
         self.addMenu(self.ExportMenu)
 
+
+
     def _initialize_file_menu(self):
         self.FileMenu.addAction("&New", "Ctrl+N", None)
         self.FileMenu.addAction("&Open","Ctrl+O",None)
         self.FileMenu.addAction("&Save", "Ctrl+S", None)
         self.FileMenu.addAction("&Save As...", "Ctrl+Shift+S", None)
+
 
     def _initialize_insert_menu(self):
         self.InsertMenu.addAction("<\tLess-than sign")
